@@ -12,6 +12,8 @@ const timeLeft=document.querySelector('#time-left');
 
 let score=document.querySelector('#score');
 let result=0;
+let currentTime=timeLeft.textContent;
+let timeInterval=1000;
 
 function getRandomSquare(){
     
@@ -53,8 +55,26 @@ squares.forEach(id =>{
 function moleMovement(){
 
 let molePosition=null;
-molePosition= setInterval(getRandomSquare,300);
+molePosition= setInterval(getRandomSquare,timeInterval);
 
 }
-//time video 18:30
-moleMovement();
+moleMovement(); 
+let molePosition=setInterval(countDown,timeInterval);
+
+
+function countDown(){
+currentTime--;
+//Set the html elementto the new value
+timeLeft.textContent=currentTime;
+if (currentTime == 0) {
+    //Stop the timer to stop the mole's movement
+    clearInterval(molePosition);
+    //Set an interval to the alert to have time to set
+    //the seconds left to 0
+    setInterval(()=>{alert("Game Over, score: "+score.textContent)},timeInterval);
+    
+    setInterval(()=>{document.location.reload()},timeInterval);
+    
+}
+
+}
