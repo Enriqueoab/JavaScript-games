@@ -72,7 +72,6 @@ if (currentTime == 0) {
     //Set an interval to the alert to have time to set
     //the seconds left to 0
     setInterval(()=>{alert("Game Over, score: "+score.textContent)},timeInterval);
-    
     setInterval(()=>{document.location.reload()},timeInterval);
     
 }
