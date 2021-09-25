@@ -10,30 +10,31 @@ node code/CRUD_functions.js
 
 This command should show us an answer as the next below:
 
-node code/CRUD_functions.js
-# => _______________Adding somo new book copies_____________
-# =>_____________Showing the stock_____________
-# {
-#  '9781472258229': [ 'Borrowed copies: 0', 'Available copies: 1' ],
-#  '9781857231380': [ 'Borrowed copies: 0', 'Available copies: 1' ],
-#  '9780553283686': [ 'Borrowed copies: 0', 'Available copies: 1' ]
-# }
-#
-# =>_____________Adding a new book_(9789652315447)________
-# =>_____________Borrowing book_(9781472258229)________
-# {
-#  '9781472258229': [ 'Borrowed copies: 0', 'Available copies: 1' ],
-#  '9780441569595': [ 'Borrowed copies: 0', 'Available copies: 1' ],
-#  '9781857231380': [ 'Borrowed copies: 0', 'Available copies: 1' ],
-#  '9780553283686': [ 'Borrowed copies: 0', 'Available copies: 1' ]
-# }
-#
-# =>_____________Returning book_(9781472258229)________
-# The book 9781472258229 are all already returned!
-# 9781472258229,Kindred,Octavia E. Butler,1979 ,Successfully Borrowed!!
-#
+```ruby
+ _______________Adding somo new book copies_____________
+ _____________Showing the stock_____________
+ {
+  '9781472258229': [ 'Borrowed copies: 0', 'Available copies: 1' ],
+  '9781857231380': [ 'Borrowed copies: 0', 'Available copies: 1' ],
+  '9780553283686': [ 'Borrowed copies: 0', 'Available copies: 1' ]
+ }
+
+_____________Adding a new book_(9789652315447)________
+_____________Borrowing book_(9781472258229)________
+ {
+  '9781472258229': [ 'Borrowed copies: 0', 'Available copies: 1' ],
+  '9780441569595': [ 'Borrowed copies: 0', 'Available copies: 1' ],
+  '9781857231380': [ 'Borrowed copies: 0', 'Available copies: 1' ],
+  '9780553283686': [ 'Borrowed copies: 0', 'Available copies: 1' ]
+ }
+
+_____________Returning book_(9781472258229)________
+ The book 9781472258229 are all already returned!
+ 9781472258229,Kindred,Octavia E. Butler,1979 ,Successfully Borrowed!!
+
 ```
 The comands looks like:
+
 ```ruby
 console.log("_______________Adding somo new book copies_____________");
 AddMoreBookCopies(9781857231380)
@@ -316,6 +317,6 @@ function countBorrowedCopies(isbn) {
   return quantityCopies;
 }
 ```
-## 2. Controllers file
+## 3. Controllers file
 
 In the file code we can see a file called [`./code/Controllers_functions.js`](Controllers_functions.js) which it doesn't have any code currently, just some names of future functions which they are in charge of control that the data of the books are the proper one (Numbers, strings, length, date,..).
